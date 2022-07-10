@@ -20,3 +20,5 @@ val BgWhite2 = Color(0XFFFEFEFF)
 
 val Transparent = Color(0x00FFFFFF)
 val White = Color(0xFFFFFFFF)
+val Black = Color(0xFF09051C)
+val White100 = Color(0xFFF4F4F4)

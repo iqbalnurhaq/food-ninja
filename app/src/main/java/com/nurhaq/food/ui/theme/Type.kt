@@ -21,6 +21,12 @@ val Typography = Typography(
         fontSize = 40.sp,
     ),
 
+    h3 = TextStyle(
+        fontFamily = FontFamily(Font(R.font.poppins_medium)),
+        fontWeight = FontWeight.Bold,
+        fontSize = 20.sp,
+    ),
+
     h4 = TextStyle(
         fontFamily = FontFamily(Font(R.font.poppins_medium)),
         fontWeight = FontWeight.Medium,
@@ -32,17 +38,28 @@ val Typography = Typography(
         fontSize = 13.sp,
     ),
 
+    h5 = TextStyle(
+        fontFamily = FontFamily(Font(R.font.poppins_medium)),
+        fontSize = 14.sp,
+    ),
+
     body2 = TextStyle(
         fontFamily = FontFamily(Font(R.font.poppins_regular)),
         fontSize = 12.sp,
         fontWeight = FontWeight.Normal
     ),
+
+    h1 = TextStyle(
+        fontFamily = FontFamily(Font(R.font.poppins_semibold)),
+        fontSize = 25.sp,
+        fontWeight = FontWeight.SemiBold
+    ),
     button = TextStyle(
         fontFamily = FontFamily(Font(R.font.poppins_medium)),
         fontSize = 16.sp,
         fontWeight = FontWeight.Medium
+    ),
 
-    )
 
 
 
