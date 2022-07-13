@@ -24,7 +24,7 @@ fun SetupNavGraph() {
     val navController = rememberAnimatedNavController()
     AnimatedNavHost(
         navController = navController,
-        startDestination = Screen.CompleteProfile.route
+        startDestination = Screen.PaymentMethod.route
     ) {
         composable(
             route = Screen.Splash.route
@@ -90,6 +90,11 @@ fun SetupNavGraph() {
             route = Screen.CompleteProfile.route
         ){
             PageCompleteProfile(navController)
+        }
+        composable(
+            route = Screen.PaymentMethod.route
+        ){
+            PagePaymentMethod(navController)
         }
     }
 }

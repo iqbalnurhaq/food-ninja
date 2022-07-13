@@ -1,6 +1,7 @@
 package com.nurhaq.food.ui.pages.auth
 
 import android.os.Build
+import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -13,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -53,16 +55,17 @@ fun PageCompleteProfile(
                                 end = 14.dp
                             )
                     ) {
-                        Image(
-                            painter = painterResource(id = R.drawable.ic_icon_back),
-                            contentDescription = "Arrow Back"
-                        )
-                        Spacer(modifier = Modifier.height(20.dp))
+
                         Column(
                             modifier = Modifier
                                 .padding(horizontal = 11.dp)
                                 .fillMaxWidth()
                         ){
+                            Image(
+                                painter = painterResource(id = R.drawable.ic_icon_back),
+                                contentDescription = "Arrow Back"
+                            )
+                            Spacer(modifier = Modifier.height(20.dp))
                             Text(
                                 text = "Fill in your bio to get\nstarted",
                                 style = MaterialTheme.typography.h1

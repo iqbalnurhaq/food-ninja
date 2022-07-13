@@ -20,6 +20,7 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -201,6 +202,37 @@ fun InputText(
 
             )
         }
+}
+
+@RequiresApi(Build.VERSION_CODES.O)
+@Composable
+fun paymentButton(
+    image: Int,
+    description: String,
+    modifier: Modifier,
+    onClick: () -> Unit
+) {
+    Box(
+        modifier = Modifier.drawColoredShadow(color = Color(0XFF5571f1))
+    ) {
+        Box(
+            modifier = modifier
+                .fillMaxWidth()
+                .height(70.dp)
+                .background(White, shape = RoundedCornerShape(22.dp))
+                .clip(RoundedCornerShape(22.dp))
+                .clickable {
+                    onClick()
+                }
+
+        ) {
+            Image(
+                modifier = Modifier.align(alignment = Alignment.Center),
+                painter = painterResource(id = image),
+                contentDescription = description,
+            )
+        }
+    }
 }
 
 
